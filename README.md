@@ -1,3 +1,3 @@
-# TCAS AI Operating Layer proof site
+# TCAS Business Development AI proof site
 
-VP-facing website for showing Nick how Andrew is using AI correctly at TCAS.
+TCAS-branded VP-facing site showing an AI-assisted business development / inside sales role.
