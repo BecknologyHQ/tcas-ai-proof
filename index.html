@@ -22,6 +22,7 @@
       <a href="#builder">Build packet</a>
       <a href="#queue">Approval queue</a>
       <a href="#signals">Manufacturer signals</a>
+      <a href="#obsolete">Obsolete research</a>
     </nav>
     <div class="sidebar-card">
       <b>Safety rule</b>
@@ -97,6 +98,45 @@
         </div>
       </div>
       <div class="queue-list" id="queueList"></div>
+    </section>
+
+
+    <section class="panel obsolete-panel" id="obsolete">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">2026 discontinued / obsolete research</p>
+          <h2>Check Banner, Keyence, Cognex, Eaton, Rockwell, and Siemens before every quote.</h2>
+          <p class="section-note">Built for a distributor sales engineer: enter a part number, choose the manufacturer, generate a lifecycle research packet, open the right source pages, and push a quote-safe opportunity into the approval queue.</p>
+        </div>
+      </div>
+      <div class="obsolete-tool">
+        <div class="obsolete-form">
+          <label>Manufacturer
+            <select id="obsoleteVendor"></select>
+          </label>
+          <label>Customer / machine / site
+            <input id="obsoleteAccount" value="Customer / installed base" />
+          </label>
+          <label>Part number or family
+            <input id="obsoletePart" value="1747 / SLC / legacy controller" />
+          </label>
+          <div class="button-grid">
+            <button class="btn primary" id="researchObsoleteBtn">Research lifecycle</button>
+            <button class="btn" id="addObsoleteQueueBtn">Add obsolete opportunity</button>
+            <button class="btn" id="copyObsoleteBtn">Copy quote pack</button>
+            <button class="btn" id="exportObsoleteBtn">Export obsolete CSV</button>
+          </div>
+        </div>
+        <div class="obsolete-output">
+          <div class="scorebar">
+            <div><span>2026 confidence</span><strong id="obsConfidence">--</strong></div>
+            <div><span>Revenue angle</span><strong id="obsAngle">--</strong></div>
+            <div><span>Human gate</span><strong>Required</strong></div>
+          </div>
+          <article><h3>Research packet</h3><pre id="obsoletePacket"></pre></article>
+          <article><h3>Source links</h3><div id="obsoleteLinks" class="source-links"></div></article>
+        </div>
+      </div>
     </section>
 
     <section class="panel signal-panel" id="signals">
