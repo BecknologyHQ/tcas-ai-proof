@@ -1,110 +1,110 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TCAS AI Sales Command Center</title>
-  <meta name="description" content="Interactive proof of a TCAS AI business-development and inside-sales engineer for manufacturer updates, customer matching, outreach drafting, and opportunity scoring." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TCAS Revenue Radar</title>
+<meta name="description" content="Distributor-grade AI inside sales console for TCAS: manufacturer intelligence, account matching, product-update outreach, quote opportunities, and human-approved business development." />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-<div class="bg"></div>
-<header class="topbar">
-  <a class="brand" href="#"><img src="./assets/tcas-logo.jpg" alt="TCAS logo"><span>AI Sales Command Center</span></a>
-  <nav><a href="#live">Live demo</a><a href="#watchlist">Manufacturer watchlist</a><a href="#pilot">Pilot</a></nav>
-</header>
-<main>
-  <section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">High-tech distributor demo · source-grounded · approval-gated</p>
-      <h1>Build TCAS a business-development rep that never forgets a product line.</h1>
-      <p class="lede">This is the product Nick should see: an AI inside-sales engineer that monitors approved manufacturers, finds customer-relevant updates, scores opportunities, drafts useful outreach, and routes everything through TCAS approval.</p>
-      <div class="actions"><a class="btn primary" href="#live">Try the command center</a><a class="btn" target="_blank" href="https://docs.google.com/spreadsheets/d/1P80not68NcaCHBKI3GbflwE1PQQanrOA5iM-AWKkIBI/edit">Open real opportunity sheet</a></div>
-    </div>
-    <aside class="terminal-card">
-      <div class="terminal-head"><span></span><span></span><span></span><b>weekly_signal_run</b></div>
-      <pre id="terminalFeed">SCAN approved TCAS manufacturers
-MATCH updates to installed-base hints
-DRAFT outreach with no-send approval gate
-WRITE opportunity rows for review</pre>
-    </aside>
-  </section>
+<div class="shell">
+  <aside class="side">
+    <img src="./assets/tcas-logo.jpg" alt="TCAS" class="logo">
+    <div class="side-title">Revenue Radar</div>
+    <nav>
+      <a href="#radar" class="active">Opportunity Radar</a>
+      <a href="#signals">Manufacturer Signals</a>
+      <a href="#accounts">Account Plays</a>
+      <a href="#outreach">Outreach Queue</a>
+      <a href="#pilot">30-Day Pilot</a>
+    </nav>
+    <div class="guardrail"><b>Approval Gate</b><span>No customer email, quote, or technical recommendation leaves without TCAS review.</span></div>
+  </aside>
 
-  <section class="stats">
-    <div><strong>66</strong><span>line-card manufacturers structured</span></div>
-    <div><strong>157</strong><span>manufacturer/category pairs</span></div>
-    <div><strong>7</strong><span>starter campaign lanes</span></div>
-    <div><strong>0</strong><span>customer messages sent automatically</span></div>
-  </section>
+  <main>
+    <section class="hero" id="radar">
+      <div>
+        <p class="eyebrow">Distributor-grade AI business development</p>
+        <h1>Turn every product update, field photo, quote, and customer file into a reason to call.</h1>
+        <p class="lead">This is the inside-sales person TCAS can build: it watches TCAS manufacturer lines, finds account-specific triggers, drafts customer updates, creates quote packets, and keeps the sales pipeline moving without bypassing human judgment.</p>
+      </div>
+      <div class="hero-proof">
+        <span>Live proof inputs already used</span>
+        <b>TCAS Linecard 2026</b>
+        <b>Hershey Edgerton palletizing file</b>
+        <b>TNA Robag field/network notes</b>
+        <b>SICK Ruler3000 + beRobox research</b>
+      </div>
+    </section>
 
-  <section id="live" class="panel live-panel">
-    <div class="panel-head">
-      <div><p class="eyebrow">Interactive proof</p><h2>Turn a product update into a customer-specific sales action.</h2></div>
-      <div class="pill">Human approval required before send</div>
-    </div>
-    <div class="app-shell">
-      <aside class="controls">
-        <label>Customer / account context
-          <select id="customerSelect"></select>
-        </label>
-        <label>Manufacturer update trigger
-          <select id="updateSelect"></select>
-        </label>
-        <label>Known site note / field evidence
-          <textarea id="siteNote" rows="5"></textarea>
-        </label>
-        <div class="toggle-row">
-          <label><input type="checkbox" id="includeTechnical" checked> include technical verification questions</label>
-          <label><input type="checkbox" id="includeManager" checked> include manager-friendly business angle</label>
+    <section class="kpis">
+      <article><span>TCAS lines structured</span><strong>66</strong><em>from line card</em></article>
+      <article><span>Manufacturer/category pairs</span><strong>157</strong><em>searchable sales map</em></article>
+      <article><span>Draftable sales lanes</span><strong>7</strong><em>Schneider, SICK, Phoenix, drives, HMI, data</em></article>
+      <article><span>Auto-sent customer messages</span><strong>0</strong><em>human approval only</em></article>
+    </section>
+
+    <section class="board">
+      <div class="board-head">
+        <div><p class="eyebrow">Today’s revenue radar</p><h2>Account-specific reasons to call</h2></div>
+        <button id="refreshBtn">Generate next-best actions</button>
+      </div>
+      <div class="radar-grid" id="radarGrid"></div>
+    </section>
+
+    <section class="console" id="signals">
+      <div class="console-left">
+        <p class="eyebrow">Interactive play builder</p>
+        <h2>Pick a customer signal. Build an outreach packet.</h2>
+        <label>Account signal<select id="playSelect"></select></label>
+        <label>Commercial focus<select id="focusSelect"><option value="new_product">New product/solution update</option><option value="spares">Critical spares / replacement path</option><option value="risk">Obsolescence or downtime risk</option><option value="data">Machine data / reporting wedge</option></select></label>
+        <label>Salesperson note<textarea id="noteBox" rows="5">Keep it useful, short, and technical enough to earn a reply. No pricing. No unsupported claims.</textarea></label>
+        <button class="primary" id="buildBtn">Build approval packet</button>
+      </div>
+      <div class="console-right">
+        <div class="scorebar"><div><span>Priority</span><strong id="priority">--</strong></div><div><span>Estimated value</span><strong id="value">--</strong></div><div><span>Next action</span><strong id="nextAction">--</strong></div></div>
+        <div class="packet">
+          <h3>Manager summary</h3><p id="summary"></p>
+          <h3>TCAS sellable package</h3><ul id="packageList"></ul>
+          <h3>Customer update draft</h3><pre id="draft"></pre>
+          <h3>CRM/opportunity row</h3><pre id="crm"></pre>
         </div>
-        <button id="generateBtn" class="btn primary wide">Generate opportunity packet</button>
-      </aside>
-      <section class="outputs">
-        <div class="score-card">
-          <div><span>Opportunity score</span><strong id="score">--</strong></div>
-          <div><span>Confidence</span><strong id="confidence">--</strong></div>
-          <div><span>TCAS lane</span><strong id="lane">--</strong></div>
-        </div>
-        <div class="output-grid">
-          <article><h3>Why this matters</h3><p id="why"></p></article>
-          <article><h3>TCAS can sell</h3><ul id="sellList"></ul></article>
-          <article><h3>Verification questions</h3><ul id="questionList"></ul></article>
-          <article><h3>CRM row preview</h3><pre id="crmRow"></pre></article>
-        </div>
-        <article class="email-draft"><div class="draft-head"><h3>Customer update draft</h3><button id="copyBtn">Copy draft</button></div><pre id="draft"></pre></article>
-      </section>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section id="watchlist" class="section-grid">
-    <div class="section-intro"><p class="eyebrow">Manufacturer intelligence</p><h2>The agent watches TCAS-approved lines, not random internet noise.</h2><p>It turns product releases, lifecycle notices, application notes, and trade-show announcements into customer-specific reasons to call.</p></div>
-    <div class="watch-grid" id="watchGrid"></div>
-  </section>
+    <section class="section" id="accounts">
+      <p class="eyebrow">What makes a distributor care</p>
+      <h2>This is not content generation. It is line-card pull-through.</h2>
+      <div class="value-grid">
+        <article><b>Move inventory and lines</b><span>Each outreach draft ties back to TCAS-approved manufacturers, not random AI ideas.</span></article>
+        <article><b>Wake up dormant accounts</b><span>Old quotes, panels, and customer PDFs become specific reasons to reconnect.</span></article>
+        <article><b>Shorten quote prep</b><span>The agent packages the manufacturer, application, risk, questions, and next action.</span></article>
+        <article><b>Create new product campaigns</b><span>Schneider, SICK, Phoenix, Red Lion, Turck, drives, HMI, safety, data access.</span></article>
+        <article><b>Protect the relationship</b><span>It drafts. TCAS approves. No blind sends, no fake engineering authority.</span></article>
+        <article><b>Bridge sales + controls</b><span>Technical evidence becomes a sales opportunity without losing engineering caveats.</span></article>
+      </div>
+    </section>
 
-  <section class="panel proof-panel">
-    <p class="eyebrow">What makes this credible</p>
-    <h2>It already uses real TCAS artifacts.</h2>
-    <div class="proof-cards">
-      <div><b>TCAS Linecard 2026</b><span>Parsed into 66 manufacturers and 157 category relationships.</span></div>
-      <div><b>Hershey Edgerton</b><span>Customer PDF/SKU data converted into a palletizing opportunity and engineering questions.</span></div>
-      <div><b>TNA Robag field issue</b><span>Machine/network photos turned into a safe technical-support path.</span></div>
-      <div><b>beRobox screen</b><span>Vendor palletizer data compared against a live Hershey SKU/rate problem.</span></div>
-    </div>
-  </section>
+    <section class="outreach" id="outreach">
+      <div><p class="eyebrow">Outbound queue Nick can understand</p><h2>What the new inside-sales person produces weekly</h2></div>
+      <table><thead><tr><th>Signal</th><th>Account</th><th>TCAS line</th><th>Draft</th><th>Status</th></tr></thead><tbody id="queueRows"></tbody></table>
+    </section>
 
-  <section id="pilot" class="pilot">
-    <div><p class="eyebrow">30-day distributor pilot</p><h2>Give Nick a controlled pilot, not a science project.</h2></div>
-    <div class="pilot-list">
-      <div><strong>1</strong><span>TCAS manufacturer watchlist with weekly product-update brief</span></div>
-      <div><strong>25</strong><span>customer-matched opportunities from quotes, BOMs, photos, and PDFs</span></div>
-      <div><strong>10</strong><span>approval-ready outreach drafts about new products/solutions</span></div>
-      <div><strong>5</strong><span>technical sales packets tying products to real controls problems</span></div>
-    </div>
-  </section>
-</main>
+    <section class="pilot" id="pilot">
+      <p class="eyebrow">Pilot ask</p>
+      <h2>Give this 30 days and measure pipeline created.</h2>
+      <div class="pilot-steps">
+        <div><strong>Week 1</strong><span>Ingest top customers, old quotes/BOMs, line card, preferred distributors, product priorities.</span></div>
+        <div><strong>Week 2</strong><span>Launch manufacturer watchlist and customer-matching rules. Create first 10 drafts.</span></div>
+        <div><strong>Week 3</strong><span>Review/approve outreach packets. Track replies, quote requests, technical follow-ups.</span></div>
+        <div><strong>Week 4</strong><span>Show Nick pipeline: opportunities created, drafts approved, quotes influenced, follow-ups booked.</span></div>
+      </div>
+    </section>
+  </main>
+</div>
 <script type="module" src="./script.js"></script>
 </body>
 </html>
