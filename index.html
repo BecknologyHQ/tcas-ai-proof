@@ -21,6 +21,7 @@
       <a href="#radar">Radar</a>
       <a href="#builder">Build packet</a>
       <a href="#queue">Approval queue</a>
+      <a href="#writer">Outreach writer</a>
       <a href="#signals">Manufacturer signals</a>
       <a href="#obsolete">Obsolete research</a>
     </nav>
@@ -100,6 +101,65 @@
       <div class="queue-list" id="queueList"></div>
     </section>
 
+
+
+    <section class="panel writer-panel" id="writer">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Outreach message writer</p>
+          <h2>Write the actual sales messages Nick can judge.</h2>
+          <p class="section-note">Built for a distributor inside-sales rep: choose a prospect, buyer, and angle, then generate email, LinkedIn, call opener, voicemail, and follow-up sequence. Nothing sends automatically.</p>
+        </div>
+      </div>
+      <div class="writer-tool">
+        <div class="writer-form">
+          <label>Prospect / account
+            <input id="writerAccount" value="SENIHCAM / Wichita-area machine builder" />
+          </label>
+          <label>Local market / context
+            <input id="writerContext" value="Wichita-area manufacturers and machine builders; special machinery, automation, material handling, palletizing, controls support" />
+          </label>
+          <label>Buyer persona
+            <select id="writerPersona">
+              <option>VP / GM</option>
+              <option>Engineering Manager</option>
+              <option>Maintenance Manager</option>
+              <option>Controls Engineer</option>
+              <option>Purchasing / inside sales</option>
+            </select>
+          </label>
+          <label>Outreach angle
+            <select id="writerAngle">
+              <option value="new_products">New product / solution update</option>
+              <option value="obsolete">Obsolete parts and replacement path</option>
+              <option value="machine_support">Machine support and controls documentation</option>
+              <option value="vision">SICK / vision / sensing opportunity</option>
+              <option value="data">Machine data / gateway / reporting wedge</option>
+            </select>
+          </label>
+          <label>Specific hook / note
+            <textarea id="writerNote" rows="4">Keep it practical: TCAS can help identify line-card parts, modernization risks, replacement paths, and quote-ready opportunities without pretending we know their plant yet.</textarea>
+          </label>
+          <div class="button-grid">
+            <button class="btn primary" id="generateOutreachBtn">Generate outreach</button>
+            <button class="btn" id="copyEmailOutreachBtn">Copy email</button>
+            <button class="btn" id="copyLinkedInBtn">Copy LinkedIn</button>
+            <button class="btn" id="addOutreachQueueBtn">Add outreach to queue</button>
+          </div>
+        </div>
+        <div class="writer-output">
+          <div class="tabs-row">
+            <button class="tab active" data-message="email">Email</button>
+            <button class="tab" data-message="linkedin">LinkedIn</button>
+            <button class="tab" data-message="call">Call opener</button>
+            <button class="tab" data-message="voicemail">Voicemail</button>
+            <button class="tab" data-message="followup">Follow-up</button>
+          </div>
+          <article><h3 id="writerTitle">Email</h3><pre id="writerText"></pre></article>
+          <article><h3>Why this is credible</h3><ul id="writerProof"></ul></article>
+        </div>
+      </div>
+    </section>
 
     <section class="panel obsolete-panel" id="obsolete">
       <div class="panel-head">
