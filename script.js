@@ -22,6 +22,91 @@ let queue = JSON.parse(localStorage.getItem('tcasRevenueRadarQueue') || '[]');
 const $ = id => document.getElementById(id);
 function log(msg){ const stamp = new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', second:'2-digit'}); $('actionLog').textContent = `[${stamp}] ${msg}\n` + $('actionLog').textContent.split('\n').slice(0,8).join('\n'); }
 function csvEscape(v){ return `"${String(v ?? '').replaceAll('"','""')}"`; }
+
+const manufacturerIntel = [{"manufacturer": "Schneider Electric / Square D", "source_type": "Solution + customer stories", "source": "https://www.se.com/us/en/work/campaign/software-defined-automation", "update": "Open, software-defined automation: hardware independence, vendor-lock-in reduction, digital continuity, edge/data intelligence.", "sell": "Modernization review for legacy controls, migration roadmap, controls architecture conversation.", "buyer": "Plant engineering, controls manager, operations leadership", "tcascat": "Contactors, drives, safety, power distribution, PLC/HMI/software", "outreach": "Use this when a customer has aging PLC/HMI/VFD infrastructure or wants flexibility without full rip-and-replace."}, {"manufacturer": "Schneider Electric / ASCO", "source_type": "New solution/product", "source": "https://www.se.com/us/en/brands/ascopower", "update": "ASCO SourcePacT for BESS isolation and NEW ASCO 300 Series Multi-voltage transfer switch covering 208\u2013480 V, reducing SKUs and voltage-compatibility delays.", "sell": "Backup power / generator / BESS readiness review; transfer switch simplification for commercial/industrial sites.", "buyer": "Facility engineer, electrical contractor, plant manager, critical power owner", "tcascat": "Power distribution, disconnects, circuit protection", "outreach": "Use this for facilities with generators, backup-power projects, BESS discussions, or electrical-room upgrades."}, {"manufacturer": "Schneider Electric / Square D IPaCS", "source_type": "Solution", "source": "https://www.se.com/us/en/work/products/explore/ipacs", "update": "Integrated Power and Control Solutions: factory-assembled/prewired electrical distribution + controls; claims 80\u201390% faster install and 40% electrical room space savings.", "sell": "Prewired integrated power/control package for expansions, machine cells, facility upgrades, and contractors under schedule pressure.", "buyer": "Electrical contractor, facility engineer, construction/project manager", "tcascat": "Power distribution, enclosures, controls", "outreach": "Use this when customer has project schedule pressure, crowded electrical rooms, or too much field wiring."}, {"manufacturer": "Phoenix Contact", "source_type": "New products + event + solution hub", "source": "https://www.phoenixcontact.com/en-us/", "update": "Automate 2026 focus on IoT automation; Push-X terminal technology; PTCB-TM circuit breakers; PLC-INTERFACE Ethernet Gateway remote relay system; VAL-US-SPP surge protection.", "sell": "Panel reliability, fast wiring, remote relay/I/O, surge protection, control-cabinet modernization.", "buyer": "Panel builder, controls engineer, maintenance manager, OEM machine builder", "tcascat": "Terminal blocks, datacom, relays, power supplies, surge, safety", "outreach": "Use this for panel cleanup, 24V reliability, remote I/O, and cabinet build productivity."}, {"manufacturer": "Phoenix Contact", "source_type": "Industries/application hub", "source": "https://www.phoenixcontact.com/en-us/industries", "update": "Industry applications: machine building, control cabinet building, digital factory, energy, process automation, infrastructure, e-mobility; cross-reference search promoted.", "sell": "Cross-reference and line-card replacement review for control cabinets and machine builders.", "buyer": "OEM machine builder, panel shop, plant controls engineer", "tcascat": "Connect, automate, supply/protect, switch/measure/monitor", "outreach": "Use this to offer a cross-reference / cabinet-build improvement review."}, {"manufacturer": "SICK", "source_type": "Blog / success stories / technology hub", "source": "https://www.sick.com/us/en/blog", "update": "SICK blog contains 665 innovation/success-story posts across machine safety, AI/order picking, 3D LiDAR, safe radar, IO-Link Safety, safety laser scanners, vision AI, pallet QR/traceability.", "sell": "Safety/sensing audit; vision/sensing feasibility; logistics and packaging inspection; IO-Link/safety update brief.", "buyer": "Safety engineer, maintenance manager, packaging engineer, warehouse automation owner", "tcascat": "Sensors, encoders, safety devices", "outreach": "Use this when customers have machine guarding, inspection, object detection, logistics, palletizing, or packaging-line issues."}, {"manufacturer": "SICK Ruler3000", "source_type": "Product family previously researched", "source": "https://www.sick.com/us/en/catalog/products/machine-vision-and-identification/3d-machine-vision/ruler3000/c/g575972", "update": "High-speed 3D streaming camera / laser triangulation for inline shape, height, defect, volume, and profile inspection.", "sell": "3D inspection feasibility review for packaging, food, tire, electronics, palletizing/case orientation, and quality data.", "buyer": "Quality engineer, controls engineer, packaging engineer", "tcascat": "Sensors, machine vision, safety-adjacent inspection", "outreach": "Use this with Hershey/food/packaging line examples."}, {"manufacturer": "Red Lion / HMS", "source_type": "Product + case studies", "source": "https://www.redlion.net", "update": "Red Lion under HMS: secure scalable data access/control/visualization from edge to cloud; rugged HMIs, IIoT gateways; Crimson 3.2 self-guided demo; case studies include FlexEdge DA50 utility modernization, Comstar assembly monitoring, wastewater remote assets.", "sell": "Machine data access, protocol conversion, HMI refresh, remote asset visibility, industrial networking.", "buyer": "Operations manager, controls engineer, maintenance manager, IT/OT owner", "tcascat": "Datacom, relays, HMIs/panel meters, gateways", "outreach": "Use this for customers wanting data without a PLC rewrite."}, {"manufacturer": "HMS / Red Lion / Anybus", "source_type": "Gateway product family", "source": "https://www.redlion.net/family/protocol-converters/data-station", "update": "Gateways/protocol converters for industrial devices, PLCs, controllers, IIoT/IT; over 250 models; Anybus next-generation communicators; FlexEdge DA10/DA30.", "sell": "Protocol gateway review: EtherNet/IP, PROFINET, Modbus, EtherCAT, CAN, legacy serial-to-modern-network conversion.", "buyer": "Controls engineer, OEM machine builder, systems integrator", "tcascat": "Datacom, industrial networking", "outreach": "Use this where machines are isolated, legacy protocols block data, or SCADA/OEE needs signals."}, {"manufacturer": "Eaton Bussmann", "source_type": "Solution center", "source": "https://www.eaton.com/us/en-us/products/electrical-circuit-protection/fuses/solution-center.html", "update": "Bussmann Solution Center: SCCR/OSCAR tools, arc flash/selective coordination/code resources, technical support and training.", "sell": "SCCR/arc flash/selective coordination support package; fuse/circuit-protection audit for panels and machines.", "buyer": "Electrical engineer, panel builder, plant maintenance, safety/compliance", "tcascat": "Circuit protection, power distribution", "outreach": "Use this when customers build panels, face SCCR questions, or have code/compliance pressure."}];
+let currentMfgPlay = '';
+function initManufacturerIntel(){
+  if(!$('mfgSelect')) return;
+  $('mfgSelect').innerHTML = manufacturerIntel.map((x,i)=>`<option value="${i}">${x.manufacturer} — ${x.source_type}</option>`).join('');
+  ['mfgSelect','mfgCustomer','mfgBuyer'].forEach(id=>$(id).addEventListener('input',buildMfgPlay));
+  $('buildMfgPlayBtn').onclick=buildMfgPlay;
+  $('copyMfgOutreachBtn').onclick=()=>{ navigator.clipboard?.writeText(currentMfgPlay); log('Copied manufacturer-driven outreach'); };
+  $('addMfgQueueBtn').onclick=addMfgToQueue;
+  $('openMfgSourceBtn').onclick=()=>{ const x=manufacturerIntel[Number($('mfgSelect').value||0)]; window.open(x.source,'_blank','noreferrer'); log(`Opened manufacturer source: ${x.manufacturer}`); };
+  $('exportMfgIntelBtn').onclick=exportMfgIntel;
+  renderMfgCards();
+  buildMfgPlay();
+}
+function renderMfgCards(){
+  $('mfgCards').innerHTML = manufacturerIntel.slice(0,6).map((x,i)=>`<article class="mfg-card" data-i="${i}"><b>${x.manufacturer}</b><span>${x.update}</span><em>${x.buyer}</em></article>`).join('');
+  document.querySelectorAll('.mfg-card').forEach(c=>c.onclick=()=>{ $('mfgSelect').value=c.dataset.i; buildMfgPlay(); document.querySelector('#mfgintel').scrollIntoView({behavior:'smooth'}); });
+}
+function buildMfgPlay(){
+  const x=manufacturerIntel[Number($('mfgSelect').value||0)];
+  const customer=$('mfgCustomer').value.trim()||'[customer]';
+  const buyer=$('mfgBuyer').value;
+  currentMfgPlay=`MANUFACTURER-DRIVEN TCAS SALES PLAY
+
+Target: ${customer}
+Buyer: ${buyer}
+Manufacturer: ${x.manufacturer}
+Source type: ${x.source_type}
+Source: ${x.source}
+
+Latest update / solution:
+${x.update}
+
+Why TCAS can sell it:
+${x.sell}
+
+TCAS line-card fit:
+${x.tcascat}
+
+Best buyer pain:
+${x.outreach}
+
+Approval-gated outreach draft:
+Subject: TCAS idea for ${customer}
+
+Hi [Name],
+
+TCAS is tracking a ${x.manufacturer} update that may be relevant to ${buyer.toLowerCase()} teams: ${x.update}
+
+The practical angle is not a generic product announcement. It is this: ${x.sell}
+
+If useful, TCAS can turn this into a short review showing:
+• where this fits your current panels, machines, or electrical systems
+• what parts/solutions map to TCAS-supported manufacturers
+• what should become a quote now
+• what needs engineering verification before any recommendation
+
+Would it be worth sending over a one-page option list or looking at one representative panel/BOM/application?
+
+Thanks,
+Andrew / TCAS`;
+  $('mfgPlay').textContent=currentMfgPlay;
+  log(`Built manufacturer sales play: ${x.manufacturer}`);
+}
+function addMfgToQueue(){
+  const x=manufacturerIntel[Number($('mfgSelect').value||0)];
+  const customer=$('mfgCustomer').value.trim()||'[customer]';
+  buildMfgPlay();
+  const item={id:`mfg-${Date.now()}`, playId:`mfg-${x.manufacturer}`, created:new Date().toISOString(), account:customer, signal:`Manufacturer update: ${x.manufacturer}`, line:x.manufacturer, lane:'Manufacturer intelligence', priority:'A-', confidence:'Source-backed first pass', value:'Pipeline creation / quote influence', buyer:$('mfgBuyer').value, focus:x.source_type, status:'needs_review', summary:`Source-backed ${x.manufacturer} sales play for ${customer}: ${x.sell}`, pkg:['Manufacturer update summary','Buyer pain angle','TCAS line-card fit','Approval-gated outreach draft','Source link'], draft:currentMfgPlay, crm:`account: ${customer}
+manufacturer: ${x.manufacturer}
+source: ${x.source}
+lane: Manufacturer intelligence
+buyer: ${$('mfgBuyer').value}
+status: needs_review
+next_step: approve outreach or attach to quote/opportunity`};
+  queue.unshift(item); saveQueue(); log(`Added manufacturer intel play to queue: ${x.manufacturer}`);
+}
+function exportMfgIntel(){
+  const cols=['manufacturer','source_type','source','update','sell','buyer','tcascat','outreach'];
+  const rows=[cols].concat(manufacturerIntel.map(x=>cols.map(c=>x[c])));
+  const csv=rows.map(r=>r.map(csvEscape).join(',')).join('\n');
+  const blob=new Blob([csv],{type:'text/csv'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='tcas-manufacturer-intel-first-pass.csv'; a.click(); URL.revokeObjectURL(url); log('Exported manufacturer intel CSV');
+}
+
 function saveQueue(){ localStorage.setItem('tcasRevenueRadarQueue', JSON.stringify(queue)); updateCounts(); renderQueue(); }
 function updateCounts(){ $('queueCount').textContent = queue.length; $('approvedCount').textContent = queue.filter(q=>q.status==='approved').length; }
 function focus(){ return focusText[$('focusSelect').value]; }
@@ -51,7 +136,7 @@ function handleQueue(id, act){ const item=queue.find(q=>q.id===id); if(!item) re
 function addToQueue(){ if(!currentPacket) build(); const exists = queue.some(q=>q.playId===currentPacket.playId && q.focus===currentPacket.focus && q.status!=='rejected'); if(exists){ log('Skipped duplicate active packet. Change focus or remove existing queue item.'); return; } queue.unshift(currentPacket); saveQueue(); $('packetStatus').textContent='Queued'; log(`Added to approval queue: ${currentPacket.account}`); }
 function exportQueue(){ const rows=[['account','signal','line','lane','focus','priority','confidence','value','buyer','status','summary','draft']].concat(queue.map(q=>[q.account,q.signal,q.line,q.lane,q.focus,q.priority,q.confidence,q.value,q.buyer,q.status,q.summary,q.draft])); const csv=rows.map(r=>r.map(csvEscape).join(',')).join('\n'); const blob=new Blob([csv],{type:'text/csv'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='tcas-revenue-radar-approval-queue.csv'; a.click(); URL.revokeObjectURL(url); log(`Exported ${queue.length} queue rows to CSV`); }
 function runDemo(){ $('searchInput').value='Schneider'; $('laneFilter').value='Controls modernization'; renderRadar(); const play=plays.find(p=>p.id==='schneider-modernization'); $('playSelect').value=play.id; $('focusSelect').value='risk'; build(play); addToQueue(); document.querySelector('#builder').scrollIntoView({behavior:'smooth'}); log('Demo workflow: filtered Schneider → built risk packet → queued for approval'); }
-function init(){ const lanes=['all',...new Set(plays.map(p=>p.lane))]; $('laneFilter').innerHTML = lanes.map(l=>`<option value="${l}">${l==='all'?'All lanes':l}</option>`).join(''); $('playSelect').innerHTML = plays.map(p=>`<option value="${p.id}">${p.account} — ${p.signal}</option>`).join(''); $('playSelect').onchange=()=>build(plays.find(p=>p.id===$('playSelect').value)); $('focusSelect').onchange=()=>build(currentPlay); $('searchInput').oninput=renderRadar; $('laneFilter').onchange=renderRadar; $('buildBtn').onclick=()=>build(currentPlay); $('addQueueBtn').onclick=addToQueue; $('copyDraftBtn').onclick=()=>{ navigator.clipboard?.writeText($('draft').textContent); log('Copied current email draft'); }; $('copyCrmBtn').onclick=()=>{ navigator.clipboard?.writeText($('crm').textContent); log('Copied current CRM row'); }; $('exportQueueBtn').onclick=exportQueue; $('exportTopBtn').onclick=exportQueue; $('clearQueueBtn').onclick=()=>{ queue=[]; saveQueue(); log('Queue reset'); }; $('demoBtn').onclick=runDemo; $('signalGrid').innerHTML=signalGroups.map(s=>`<article><b>${s[0]}</b><span>${s[1]}</span><em>${s[2]}</em></article>`).join(''); renderRadar(); renderQueue(); updateCounts(); build(plays[0]); initBotLab(); initOutreachWriter(); initObsoleteTool(); }
+function init(){ const lanes=['all',...new Set(plays.map(p=>p.lane))]; $('laneFilter').innerHTML = lanes.map(l=>`<option value="${l}">${l==='all'?'All lanes':l}</option>`).join(''); $('playSelect').innerHTML = plays.map(p=>`<option value="${p.id}">${p.account} — ${p.signal}</option>`).join(''); $('playSelect').onchange=()=>build(plays.find(p=>p.id===$('playSelect').value)); $('focusSelect').onchange=()=>build(currentPlay); $('searchInput').oninput=renderRadar; $('laneFilter').onchange=renderRadar; $('buildBtn').onclick=()=>build(currentPlay); $('addQueueBtn').onclick=addToQueue; $('copyDraftBtn').onclick=()=>{ navigator.clipboard?.writeText($('draft').textContent); log('Copied current email draft'); }; $('copyCrmBtn').onclick=()=>{ navigator.clipboard?.writeText($('crm').textContent); log('Copied current CRM row'); }; $('exportQueueBtn').onclick=exportQueue; $('exportTopBtn').onclick=exportQueue; $('clearQueueBtn').onclick=()=>{ queue=[]; saveQueue(); log('Queue reset'); }; $('demoBtn').onclick=runDemo; $('signalGrid').innerHTML=signalGroups.map(s=>`<article><b>${s[0]}</b><span>${s[1]}</span><em>${s[2]}</em></article>`).join(''); renderRadar(); renderQueue(); updateCounts(); build(plays[0]); initManufacturerIntel(); initBotLab(); initOutreachWriter(); initObsoleteTool(); }
 
 
 

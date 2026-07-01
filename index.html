@@ -22,6 +22,7 @@
       <a href="#builder">Build packet</a>
       <a href="#queue">Approval queue</a>
       <a href="#writer">Outreach writer</a>
+      <a href="#mfgintel">Manufacturer intel</a>
       <a href="#botlab">Outreach bot lab</a>
       <a href="#signals">Manufacturer signals</a>
       <a href="#obsolete">Obsolete research</a>
@@ -51,6 +52,41 @@
       <article><span>Manufacturer/category links</span><strong>157</strong><em>line-card pull-through</em></article>
       <article><span>Queue items</span><strong id="queueCount">0</strong><em>saved in browser</em></article>
       <article><span>Approved drafts</span><strong id="approvedCount">0</strong><em>review gate visible</em></article>
+    </section>
+
+
+    <section class="panel mfg-panel" id="mfgintel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Manufacturer intelligence feed</p>
+          <h2>Official product updates, solutions, and case studies converted into TCAS sales plays.</h2>
+          <p class="section-note">This is the real business-development engine: TCAS line-card manufacturer source → update/solution → buyer → sellable package → outreach draft.</p>
+        </div>
+        <div class="queue-actions"><button class="btn" id="exportMfgIntelBtn">Export manufacturer intel CSV</button></div>
+      </div>
+      <div class="mfg-tool">
+        <div>
+          <label>Manufacturer update / solution
+            <select id="mfgSelect"></select>
+          </label>
+          <label>Target customer / industry
+            <input id="mfgCustomer" value="Wichita-area manufacturer / machine builder" />
+          </label>
+          <label>Buyer role
+            <select id="mfgBuyer"><option>Engineering Manager</option><option>Maintenance Manager</option><option>Plant Manager</option><option>Electrical Contractor</option><option>OEM Machine Builder</option><option>Quality Engineer</option></select>
+          </label>
+          <div class="button-grid">
+            <button class="btn primary" id="buildMfgPlayBtn">Build sales play</button>
+            <button class="btn" id="copyMfgOutreachBtn">Copy outreach</button>
+            <button class="btn" id="addMfgQueueBtn">Add to approval queue</button>
+            <button class="btn" id="openMfgSourceBtn">Open source</button>
+          </div>
+        </div>
+        <div>
+          <div class="mfg-cards" id="mfgCards"></div>
+          <article class="mfg-output"><h3>TCAS sales play</h3><pre id="mfgPlay"></pre></article>
+        </div>
+      </div>
     </section>
 
     <section class="panel radar-panel">
