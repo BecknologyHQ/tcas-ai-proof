@@ -22,6 +22,7 @@
       <a href="#builder">Build packet</a>
       <a href="#queue">Approval queue</a>
       <a href="#writer">Outreach writer</a>
+      <a href="#schneider">Schneider M580/EAE</a>
       <a href="#mfgintel">Manufacturer intel</a>
       <a href="#botlab">Outreach bot lab</a>
       <a href="#signals">Manufacturer signals</a>
@@ -54,6 +55,50 @@
       <article><span>Approved drafts</span><strong id="approvedCount">0</strong><em>review gate visible</em></article>
     </section>
 
+
+
+    <section class="panel schneider-panel" id="schneider">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Schneider focus lane</p>
+          <h2>M580 / M340 PAC + EcoStruxure Automation Expert sales workbench.</h2>
+          <p class="section-note">A TCAS sales engineer can turn Schneider installed-base clues into a modernization assessment, EAE readiness conversation, discovery questions, and copyable outreach.</p>
+        </div>
+        <div class="queue-actions"><button class="btn" id="copySchneiderBriefBtn">Copy Schneider brief</button></div>
+      </div>
+      <div class="sch-grid">
+        <div class="sch-controls">
+          <label>Installed-base clue
+            <select id="schInstallBase">
+              <option value="m340">Modicon M340 PAC / Unity or Control Expert</option>
+              <option value="m580">Modicon M580 PAC / Ethernet PAC</option>
+              <option value="x80">X80 I/O / Quantum-to-M580 style architecture</option>
+              <option value="mixed">Mixed Schneider-heavy plant: M340 + M580 + drives/HMI</option>
+              <option value="unknown">Unknown Schneider panel / needs inventory</option>
+            </select>
+          </label>
+          <label>Customer / account
+            <input id="schCustomer" value="SENIHCAM / Wichita-area machine builder" />
+          </label>
+          <label>Buyer
+            <select id="schBuyer"><option>Controls Engineer</option><option>Plant Engineering Manager</option><option>Maintenance Manager</option><option>Operations Manager</option><option>OEM Machine Builder</option></select>
+          </label>
+          <label>Commercial goal
+            <select id="schGoal"><option value="assessment">Sell PAC modernization assessment</option><option value="backup">Find backup / firmware / license risk</option><option value="eae">Open EAE readiness conversation</option><option value="migration">Build M340/M580 migration roadmap</option><option value="spares">Create spares + software support quote</option></select>
+          </label>
+          <div class="button-grid">
+            <button class="btn primary" id="buildSchneiderBtn">Build Schneider play</button>
+            <button class="btn" id="addSchneiderQueueBtn">Add to queue</button>
+            <button class="btn" id="copySchneiderEmailBtn">Copy email</button>
+            <button class="btn" id="exportSchneiderSourcesBtn">Export sources CSV</button>
+          </div>
+        </div>
+        <div class="sch-output-wrap">
+          <div class="source-strip" id="schSourceCards"></div>
+          <article class="sch-output"><h3>TCAS Schneider sales play</h3><pre id="schneiderPlay"></pre></article>
+        </div>
+      </div>
+    </section>
 
     <section class="panel mfg-panel" id="mfgintel">
       <div class="panel-head">
