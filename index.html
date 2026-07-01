@@ -22,6 +22,7 @@
       <a href="#builder">Build packet</a>
       <a href="#queue">Approval queue</a>
       <a href="#writer">Outreach writer</a>
+      <a href="#botlab">Outreach bot lab</a>
       <a href="#signals">Manufacturer signals</a>
       <a href="#obsolete">Obsolete research</a>
     </nav>
@@ -102,6 +103,64 @@
     </section>
 
 
+
+
+    <section class="panel botlab-panel" id="botlab">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">X + Reddit improved outreach bot</p>
+          <h2>Don’t automate spam. Automate the research and approval workflow.</h2>
+          <p class="section-note">Built from X + Reddit research: buyers hate fake personalization. The bot must prove why this account, why now, what useful artifact, and why the rep should approve it.</p>
+        </div>
+      </div>
+      <div class="botlab-grid">
+        <div class="botlab-card">
+          <h3>Research signals checked</h3>
+          <ul>
+            <li>X: AI SDR complaints, deliverability, human-in-loop guardrails</li>
+            <li>X: industrial distributor outreach around obsolete parts and maintenance managers</li>
+            <li>Reddit search: r/sales AI SDR failures and fake personalization complaints</li>
+            <li>Reddit search: r/salesdevelopment automation concerns</li>
+            <li>Reddit search: r/PLC how not to annoy engineers / Keyence rep context</li>
+          </ul>
+        </div>
+        <div class="botlab-card rules">
+          <h3>Bot rejection rules</h3>
+          <label><input type="checkbox" checked disabled> No exact trigger → do not send</label>
+          <label><input type="checkbox" checked disabled> No TCAS line-card fit → research only</label>
+          <label><input type="checkbox" checked disabled> No contact role match → do not send</label>
+          <label><input type="checkbox" checked disabled> Claims not sourced → remove</label>
+          <label><input type="checkbox" checked disabled> High-value account → human review required</label>
+        </div>
+      </div>
+      <div class="botlab-builder">
+        <div>
+          <label>Trigger quality
+            <select id="triggerQuality">
+              <option value="strong">Strong: known obsolete part / product signal / installed-base clue</option>
+              <option value="medium">Medium: similar industry, but needs verification</option>
+              <option value="weak">Weak: generic company list only</option>
+            </select>
+          </label>
+          <label>Useful artifact offered
+            <select id="artifactOffer">
+              <option value="obsolete_snapshot">Obsolete parts snapshot</option>
+              <option value="spare_list">Critical spare list</option>
+              <option value="product_update">New product update brief</option>
+              <option value="panel_photo">Panel/photo opportunity review</option>
+              <option value="controls_backup">PLC/HMI backup risk check</option>
+            </select>
+          </label>
+          <button class="btn primary" id="runBotScoringBtn">Score outreach bot</button>
+          <button class="btn" id="generateBotSequenceBtn">Generate better sequence</button>
+          <button class="btn" id="copyBotSequenceBtn">Copy better sequence</button>
+        </div>
+        <div>
+          <div class="scorebar"><div><span>Send decision</span><strong id="botDecision">--</strong></div><div><span>Why now</span><strong id="botWhyNow">--</strong></div><div><span>Channel</span><strong id="botChannel">--</strong></div></div>
+          <article><h3>Better outreach sequence</h3><pre id="botSequence"></pre></article>
+        </div>
+      </div>
+    </section>
 
     <section class="panel writer-panel" id="writer">
       <div class="panel-head">
