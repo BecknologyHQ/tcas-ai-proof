@@ -1,0 +1,120 @@
+{
+  "assets": {
+    "common": {
+      "file": "assets/common.glb",
+      "sha256": "4f77943b9ceaf1ecf5ca0a0a062fa339e6c8766e7545fb34757330d06b93a454",
+      "bytes": 20180384,
+      "parts": 461,
+      "source_triangles": 1989474,
+      "browser_triangles": 947224,
+      "chunks": [
+        {
+          "filename": "common-000.bin",
+          "bytes": 2097152,
+          "sha256": "10de4f2e39964d0fc6569314762aae72182288b359a06321da017e986334fbb3"
+        },
+        {
+          "filename": "common-001.bin",
+          "bytes": 2097152,
+          "sha256": "6007bb782fef362097cfd54eda924e9e72b6f6363ce380daa39eb70e3692a5ea"
+        },
+        {
+          "filename": "common-002.bin",
+          "bytes": 2097152,
+          "sha256": "c6c4813fefac9d1ebc4da6ac3fbd2729e2fab1dd242f97a80072ed5557d50814"
+        },
+        {
+          "filename": "common-003.bin",
+          "bytes": 2097152,
+          "sha256": "75a79acb08a4fffd3e31c3063d9369e40f351eb27827fd09ca904be421a4c68e"
+        },
+        {
+          "filename": "common-004.bin",
+          "bytes": 2097152,
+          "sha256": "f326f82d99810caf8b6fe0a2ce910166e78ef9e714dabf1054a44d0240dbce71"
+        },
+        {
+          "filename": "common-005.bin",
+          "bytes": 2097152,
+          "sha256": "f1bec09b1eeaa8f1444237fa18c045455924ab21bfc5f220f2c0c7b4b282ff03"
+        },
+        {
+          "filename": "common-006.bin",
+          "bytes": 2097152,
+          "sha256": "17790a71171b6368cee10cf24f6abf30f0b32494b38a750e5e3369a4c4b97ab8"
+        },
+        {
+          "filename": "common-007.bin",
+          "bytes": 2097152,
+          "sha256": "b71ad343c4cdaf391fae694cf04a2b6c745cfb0493977c6e3be8caeb3f61370c"
+        },
+        {
+          "filename": "common-008.bin",
+          "bytes": 2097152,
+          "sha256": "3dd4d7584c369e599bf1d774f907021d41203812cd14cec89bc48e3c9197c5db"
+        },
+        {
+          "filename": "common-009.bin",
+          "bytes": 1306016,
+          "sha256": "564356a92b02a3ee5dd4fb9ec140e49f0ec67b951fe342abf65e2d1e8c5d0a8b"
+        }
+      ]
+    },
+    "pack-check": {
+      "file": "assets/pack-check.glb",
+      "sha256": "24bb4af27678dbdcdc08e5b73c38ed1c3d96aeca12a4cd95d958fb12c3e94b02",
+      "bytes": 716536,
+      "parts": 29,
+      "source_triangles": 74852,
+      "browser_triangles": 35054
+    },
+    "cap-check": {
+      "file": "assets/cap-check.glb",
+      "sha256": "e9d73932363eb788b2be1b67a0cf68f0a397a6c58485a1fcccbd1ab530877177",
+      "bytes": 1479908,
+      "parts": 34,
+      "source_triangles": 92076,
+      "browser_triangles": 52098
+    },
+    "case-read": {
+      "file": "assets/case-read.glb",
+      "sha256": "1862afd677f64e8e7acc3008fd06bbe4de143ddaf7484cc67090703f21fb0c25",
+      "bytes": 1034468,
+      "parts": 35,
+      "source_triangles": 121392,
+      "browser_triangles": 52092
+    },
+    "part-check": {
+      "file": "assets/part-check.glb",
+      "sha256": "8ad7dbe8407c3e504c3fac7deaf72851da7559deee05f66f6123132aa054fe22",
+      "bytes": 977572,
+      "parts": 6,
+      "source_triangles": 106868,
+      "browser_triangles": 44882
+    }
+  },
+  "variant_metadata": {
+    "pack-check": {
+      "defect_sample": 4,
+      "defect": "absent front label",
+      "description": "Formed flat-bottom gusseted stand-up pouches"
+    },
+    "cap-check": {
+      "defect_sample": 4,
+      "defect": "missing closure with visible neck bore",
+      "description": "Hollow bottles, shoulder and threaded neck"
+    },
+    "case-read": {
+      "defect_sample": 4,
+      "defect": "blank read panel",
+      "description": "Folded cartons with seam tape; illustrative non-encoded bar marks"
+    },
+    "part-check": {
+      "defect_sample": 4,
+      "defect": "one upright bore not machined",
+      "description": "L brackets with drilled base and upright bores"
+    }
+  },
+  "units": "meters",
+  "browser_up": "Y"
+}
