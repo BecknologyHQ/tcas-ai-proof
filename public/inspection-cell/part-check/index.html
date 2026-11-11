@@ -1,38 +1,20 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="A mechanical-part configuration with drilled brackets and an illustrative missing-feature example.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Part inspection | Industrial 3D">
-<meta property="og:description" content="A mechanical-part configuration with drilled brackets and an illustrative missing-feature example.">
-<meta property="og:image" content="https://becknologyhq.github.io/tcas-ai-proof/inspection-cell/renders/part-check-overview.png">
-<meta property="og:url" content="https://becknologyhq.github.io/tcas-ai-proof/inspection-cell/part-check/">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://becknologyhq.github.io/tcas-ai-proof/inspection-cell/part-check/">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="../gallery.css">
-<title>Part inspection | Industrial 3D</title>
-</head>
-<body data-base="../" data-variant="part-check">
-<header><div><small>INDUSTRIAL 3D</small><strong>Conveyor inspection cell</strong></div><a class="header-link" href="../model.html?variant=part-check">Open 3D model</a></header>
+<html lang="en"><head><base href="../"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta property="og:title" content="TCAS | part-check inspection simulation"><meta property="og:image" content="https://becknologyhq.github.io/tcas-ai-proof/inspection-cell/renders/part-check-overview-v2.png"><meta name="twitter:card" content="summary_large_image"><title>TCAS | Inspection proposal simulation</title><meta name="description" content="TCAS conveyor inspection proposal: interactive concept simulation and item-linked illustrative inspection."><link rel="icon" href="data:,"><link rel="stylesheet" href="simulation.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.min.js","three/addons/":"./vendor/jsm/"}}</script></head>
+<body data-variant="part-check">
+<header><a class="logo" href="https://www.tcas.com" target="_blank" rel="noopener"><img src="brand/tcas-logo.png" width="348" height="50" alt="TCAS - Thorp Controls Automation Solutions"></a><span class="header-note">APPLICATION PROPOSAL <b>SIMULATED</b></span></header>
 <main>
-<section class="intro"><div><h1>Part inspection</h1><p>A mechanical-part configuration with drilled brackets and an illustrative missing-feature example.</p></div><div class="actions"><a class="button primary" id="explore" href="../model.html?variant=part-check">Explore 3D</a><button id="copy-link" type="button">Copy link</button></div></section>
-<nav class="configs" aria-label="Product configuration">
-<a class="config" href="../pack-check/"><span>01</span><strong>Package inspection</strong></a>
-<a class="config" href="../cap-check/"><span>02</span><strong>Cap inspection</strong></a>
-<a class="config" href="../case-read/"><span>03</span><strong>Case code reading</strong></a>
-<a class="config" aria-current="page" href="../part-check/"><span>04</span><strong>Part inspection</strong></a>
-</nav>
-<section class="viewer" aria-label="Rendered model views">
-<div class="toolbar"><div class="views" role="group" aria-label="Camera view"><button data-view="overview" aria-pressed="true" type="button">Overview</button><button data-view="inspection" aria-pressed="false" type="button">Inspection</button><button data-view="reject" aria-pressed="false" type="button">Reject</button><button data-view="drive" aria-pressed="false" type="button">Drive</button></div><div class="render-badge">Concept geometry / Native RTX render</div></div>
-<div class="image-wrap"><img id="render" src="../renders/part-check-overview.png" alt="Part inspection - Overview - original concept model" width="1536" height="1024" fetchpriority="high"></div>
-<div class="image-caption"><span id="image-status" role="status">Overview / Native NVIDIA RTX render</span><a id="full-size" href="../renders/part-check-overview.png" target="_blank" rel="noopener">Full-size image</a></div>
+<section class="intro"><div><p class="eyebrow">THORP CONTROLS AUTOMATION SOLUTIONS</p><h1 id="variantTitle">Conveyor inspection</h1><p id="description">Preparing detailed CAD geometry...</p></div><nav class="variants" aria-label="Product configuration"><a href="pack-check/?v=sim2" data-variant="pack-check">Pack check</a><a href="cap-check/?v=sim2" data-variant="cap-check">Cap check</a><a href="case-read/?v=sim2" data-variant="case-read">Case read</a><a href="part-check/?v=sim2" data-variant="part-check">Part check</a></nav></section>
+<section class="workspace">
+<div class="equipment">
+<div class="viewbar"><div class="views" aria-label="Camera views"><button data-view="Overview">Overview</button><button data-view="Inspection">Inspection</button><button data-view="Reject">Reject</button><button data-view="Drive">Drive</button></div><span class="canvas-label">INTERACTIVE PROCESS SIMULATION</span></div>
+<div id="stage" aria-label="Interactive conveyor inspection simulation"><div class="scene-caption"><span id="mode" class="mode">LOADING</span><span id="phase">Preparing equipment</span></div><div id="status" role="status">Loading detailed geometry...</div><div id="picked"></div></div>
+<div class="transport" aria-label="Simulation controller"><div class="primary-controls"><button data-action="start" class="primary" disabled>Start</button><button data-action="pause" disabled>Pause</button><button data-action="stop" disabled>Stop</button><button data-action="reset" disabled>Reset</button><button data-action="estop" class="danger" disabled>E-stop</button><button data-action="releaseEstop" disabled>Release E-stop</button></div><label class="speed">Playback <select id="rate" aria-label="Illustrative playback speed"><option value="0.5">0.5x</option><option value="1" selected>1x</option><option value="2">2x</option><option value="4">4x</option></select></label></div>
+<p class="run-note" id="runNote">Ready means stopped. Press Start to run the illustrative sequence.</p>
+<details class="scenario"><summary>Scenario controls &amp; equipment selection</summary><div class="scenario-controls"><button data-action="injectBad" disabled>Bad sample</button><button data-action="clearTray" disabled>Clear tray</button><button data-action="rewind" disabled>Rewind run</button><label class="fault-toggle"><input id="sensorFault" type="checkbox"> Block reject confirmation</label></div><p id="selection">Select a CAD component to identify it. Drag to orbit; right-drag to pan; scroll or pinch to zoom.</p></details>
+</div>
+<aside class="inspection" aria-label="Simulated inspection result"><div class="panel-heading"><h2>Inspection result</h2><span>SIMULATED</span></div><div class="capture-wrap"><img id="inspectionImage" alt="SIMULATED 3D item image" hidden><div id="imageEmpty">An item-derived 3D image appears at inspection.</div><span>SIMULATED 3D IMAGE</span></div><div id="result" aria-live="polite"><strong>Waiting for first item</strong><p>Arrival - trigger - inspection - disposition</p></div><div id="itemDetail"></div><p class="image-note">Illustrative 3D inspection view, not a live camera feed.</p><div class="counters" id="counters"></div><p class="session-note">Demo session counts. Inspect an item ID to follow its outcome.</p></aside>
 </section>
-<section class="details"><div><h2>What you are looking at</h2><p>Original CAD-based concept geometry: fabricated conveyor sideframes, belt return and drive, adjustable guides, camera and light mounts, an operator cabinet and a side-reject mechanism.</p></div><div><h2>Rendered views or interactive geometry</h2><p>These images were rendered with NVIDIA RTX. Select Explore 3D to orbit, pan, zoom and identify components in the browser model. Both views use the same original CAD assembly; the browser uses optimized meshes.</p></div></section>
-<footer><span>Concept review. Static poses, illustrative products and no live machine connection.</span><span>Inspection performance and physical operation are not demonstrated.</span></footer>
-</main>
-<script src="../gallery.js"></script>
-</body>
-</html>
+<section class="records-area"><div><h2>Item records <span>SIMULATED</span></h2><p>Choose an ID to follow its decision and disposition.</p></div><div class="record-scroll"><table><thead><tr><th>Item ID</th><th>Inspection time</th><th>Decision / reason</th><th>Disposition</th></tr></thead><tbody id="records"><tr><td colspan="4">No inspections yet. Start the sequence.</td></tr></tbody></table></div></section>
+<details class="event-panel"><summary>Sequence events <span id="eventCount">0</span></summary><ol id="events"></ol></details>
+<section class="qualification"><h2>From concept to sample trial</h2><p>This concept demonstrates correctly and incorrectly formed products moving through inspection and rejection. Final equipment selection requires real sample, optics, spacing, reject and safeguarding validation. Playback speed is not machine throughput.</p><details class="model-details"><summary>Technical model details</summary><p>Illustrative product examples and tab-local demo records. This is not a live camera inspection or a safety-qualified controller.</p><a href="manifest.json" target="_blank" rel="noopener">Geometry source details</a></details><details class="rendered-views"><summary>Static NVIDIA RTX reference views</summary><nav id="renderReferences"></nav></details></section>
+</main><footer><strong>TCAS</strong><span>Thorp Controls Automation Solutions</span><span>Concept simulation / no live machine connection / sample validation required</span></footer><script type="module" src="simulation-cc5b1f8c091a.js"></script></body></html>

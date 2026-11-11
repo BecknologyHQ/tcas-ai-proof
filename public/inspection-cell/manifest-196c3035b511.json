@@ -1,0 +1,120 @@
+{
+  "assets": {
+    "common": {
+      "file": "assets/common.glb",
+      "sha256": "42d78d2d503d8f612f8264d596d836ab86842b0b6409cf10070449678bc71d35",
+      "bytes": 20455200,
+      "parts": 471,
+      "source_triangles": 2012958,
+      "browser_triangles": 959446,
+      "chunks": [
+        {
+          "filename": "common-42d78d2d503d-000.bin",
+          "bytes": 2097152,
+          "sha256": "2d866e41060059c0986923d5849d756f98dc092ddfee0ad47656e1a716d4f1bd"
+        },
+        {
+          "filename": "common-42d78d2d503d-001.bin",
+          "bytes": 2097152,
+          "sha256": "ad5125a6374433464deb279397c7863952db220733ee4c7b0f64e27f0e1ea9c9"
+        },
+        {
+          "filename": "common-42d78d2d503d-002.bin",
+          "bytes": 2097152,
+          "sha256": "f5bae67d4360af24641c0407e003d07a758e34883c94b1252a8fd70769ce5da5"
+        },
+        {
+          "filename": "common-42d78d2d503d-003.bin",
+          "bytes": 2097152,
+          "sha256": "58142d4e2942e9d2d7800e0f40fc6ae76c85772a775d77af88ae20ce0592822a"
+        },
+        {
+          "filename": "common-42d78d2d503d-004.bin",
+          "bytes": 2097152,
+          "sha256": "624701480296ad2ce1f832102242b1b179bda2b655c55457d0087e407cb7dfef"
+        },
+        {
+          "filename": "common-42d78d2d503d-005.bin",
+          "bytes": 2097152,
+          "sha256": "fa59f70937257c6a546cb75d7d3db82c3d735397f8d2079bfc14a9951c406f9e"
+        },
+        {
+          "filename": "common-42d78d2d503d-006.bin",
+          "bytes": 2097152,
+          "sha256": "e1972ab3209c4c568d3a8c60e03b643a0228b5bb4eb53fefd937d504a354888b"
+        },
+        {
+          "filename": "common-42d78d2d503d-007.bin",
+          "bytes": 2097152,
+          "sha256": "ea780f0fa3ad63ec6481b7234b7880f7cdb63a92334509c1b693f65e9c825334"
+        },
+        {
+          "filename": "common-42d78d2d503d-008.bin",
+          "bytes": 2097152,
+          "sha256": "0b0713a756d0395e45309b7f781b6b864ae1f851db81838cdabe656f7cd501a4"
+        },
+        {
+          "filename": "common-42d78d2d503d-009.bin",
+          "bytes": 1580832,
+          "sha256": "df13b4592277a630b4a5fa6a9729423ac1c453e5b0a71586ad6f432216e1183d"
+        }
+      ]
+    },
+    "pack-check": {
+      "file": "assets/pack-check.glb",
+      "sha256": "24bb4af27678dbdcdc08e5b73c38ed1c3d96aeca12a4cd95d958fb12c3e94b02",
+      "bytes": 716536,
+      "parts": 29,
+      "source_triangles": 74852,
+      "browser_triangles": 35054
+    },
+    "cap-check": {
+      "file": "assets/cap-check.glb",
+      "sha256": "e9d73932363eb788b2be1b67a0cf68f0a397a6c58485a1fcccbd1ab530877177",
+      "bytes": 1479908,
+      "parts": 34,
+      "source_triangles": 92076,
+      "browser_triangles": 52098
+    },
+    "case-read": {
+      "file": "assets/case-read.glb",
+      "sha256": "1862afd677f64e8e7acc3008fd06bbe4de143ddaf7484cc67090703f21fb0c25",
+      "bytes": 1034468,
+      "parts": 35,
+      "source_triangles": 121392,
+      "browser_triangles": 52092
+    },
+    "part-check": {
+      "file": "assets/part-check.glb",
+      "sha256": "8ad7dbe8407c3e504c3fac7deaf72851da7559deee05f66f6123132aa054fe22",
+      "bytes": 977572,
+      "parts": 6,
+      "source_triangles": 106868,
+      "browser_triangles": 44882
+    }
+  },
+  "variant_metadata": {
+    "pack-check": {
+      "defect_sample": 4,
+      "defect": "absent front label",
+      "description": "Formed flat-bottom gusseted stand-up pouches"
+    },
+    "cap-check": {
+      "defect_sample": 4,
+      "defect": "missing closure with visible neck bore",
+      "description": "Hollow bottles, shoulder and threaded neck"
+    },
+    "case-read": {
+      "defect_sample": 4,
+      "defect": "blank read panel",
+      "description": "Folded cartons with seam tape; illustrative non-encoded bar marks"
+    },
+    "part-check": {
+      "defect_sample": 4,
+      "defect": "one upright bore not machined",
+      "description": "L brackets with drilled base and upright bores"
+    }
+  },
+  "units": "meters",
+  "browser_up": "Y"
+}
