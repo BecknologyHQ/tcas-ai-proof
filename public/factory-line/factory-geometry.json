@@ -1,0 +1,1641 @@
+{
+  "units": "m",
+  "coordinateConvention": "FreeCADZup->glTFYup",
+  "axisCoordinateSystem": "FreeCAD Z-up; map [x,y,z] to browser [x,z,-y]",
+  "actors": {
+    "static": {
+      "names": [
+        "TCAS_concept_infeed_endless_belt",
+        "TCAS_concept_infeed_bearing_0-1",
+        "TCAS_concept_infeed_shaft_0-1",
+        "TCAS_concept_infeed_bearing_01",
+        "TCAS_concept_infeed_shaft_01",
+        "TCAS_concept_infeed_bearing_1-1",
+        "TCAS_concept_infeed_shaft_1-1",
+        "TCAS_concept_infeed_bearing_11",
+        "TCAS_concept_infeed_shaft_11",
+        "TCAS_concept_infeed_drive_can",
+        "TCAS_concept_infeed_drive_gearbox",
+        "TCAS_concept_infeed_drive_terminal",
+        "TCAS_concept_infeed_drive_fin0",
+        "TCAS_concept_infeed_drive_fin1",
+        "TCAS_concept_infeed_drive_fin2",
+        "TCAS_concept_infeed_drive_fin3",
+        "TCAS_concept_infeed_drive_fin4",
+        "TCAS_concept_infeed_drive_fin5",
+        "TCAS_concept_infeed_side_-1",
+        "TCAS_concept_infeed_leg_-10",
+        "TCAS_concept_infeed_foot_-10",
+        "TCAS_concept_infeed_level_-10",
+        "TCAS_concept_infeed_gusset_-10",
+        "TCAS_concept_infeed_leg_-11",
+        "TCAS_concept_infeed_foot_-11",
+        "TCAS_concept_infeed_level_-11",
+        "TCAS_concept_infeed_gusset_-11",
+        "TCAS_concept_infeed_side_1",
+        "TCAS_concept_infeed_leg_10",
+        "TCAS_concept_infeed_foot_10",
+        "TCAS_concept_infeed_level_10",
+        "TCAS_concept_infeed_gusset_10",
+        "TCAS_concept_infeed_leg_11",
+        "TCAS_concept_infeed_foot_11",
+        "TCAS_concept_infeed_level_11",
+        "TCAS_concept_infeed_gusset_11",
+        "TCAS_concept_infeed_cross_0",
+        "TCAS_concept_infeed_cross_1",
+        "TCAS_concept_accepted_endless_belt",
+        "TCAS_concept_accepted_bearing_0-1",
+        "TCAS_concept_accepted_shaft_0-1",
+        "TCAS_concept_accepted_bearing_01",
+        "TCAS_concept_accepted_shaft_01",
+        "TCAS_concept_accepted_bearing_1-1",
+        "TCAS_concept_accepted_shaft_1-1",
+        "TCAS_concept_accepted_bearing_11",
+        "TCAS_concept_accepted_shaft_11",
+        "TCAS_concept_accepted_drive_can",
+        "TCAS_concept_accepted_drive_gearbox",
+        "TCAS_concept_accepted_drive_terminal",
+        "TCAS_concept_accepted_drive_fin0",
+        "TCAS_concept_accepted_drive_fin1",
+        "TCAS_concept_accepted_drive_fin2",
+        "TCAS_concept_accepted_drive_fin3",
+        "TCAS_concept_accepted_drive_fin4",
+        "TCAS_concept_accepted_drive_fin5",
+        "TCAS_concept_accepted_side_-1",
+        "TCAS_concept_accepted_leg_-10",
+        "TCAS_concept_accepted_foot_-10",
+        "TCAS_concept_accepted_level_-10",
+        "TCAS_concept_accepted_gusset_-10",
+        "TCAS_concept_accepted_leg_-11",
+        "TCAS_concept_accepted_foot_-11",
+        "TCAS_concept_accepted_level_-11",
+        "TCAS_concept_accepted_gusset_-11",
+        "TCAS_concept_accepted_side_1",
+        "TCAS_concept_accepted_leg_10",
+        "TCAS_concept_accepted_foot_10",
+        "TCAS_concept_accepted_level_10",
+        "TCAS_concept_accepted_gusset_10",
+        "TCAS_concept_accepted_leg_11",
+        "TCAS_concept_accepted_foot_11",
+        "TCAS_concept_accepted_level_11",
+        "TCAS_concept_accepted_gusset_11",
+        "TCAS_concept_accepted_cross_0",
+        "TCAS_concept_accepted_cross_1",
+        "TCAS_concept_carton_lane_endless_belt",
+        "TCAS_concept_carton_lane_bearing_0-1",
+        "TCAS_concept_carton_lane_shaft_0-1",
+        "TCAS_concept_carton_lane_bearing_01",
+        "TCAS_concept_carton_lane_shaft_01",
+        "TCAS_concept_carton_lane_bearing_1-1",
+        "TCAS_concept_carton_lane_shaft_1-1",
+        "TCAS_concept_carton_lane_bearing_11",
+        "TCAS_concept_carton_lane_shaft_11",
+        "TCAS_concept_carton_lane_drive_can",
+        "TCAS_concept_carton_lane_drive_gearbox",
+        "TCAS_concept_carton_lane_drive_terminal",
+        "TCAS_concept_carton_lane_drive_fin0",
+        "TCAS_concept_carton_lane_drive_fin1",
+        "TCAS_concept_carton_lane_drive_fin2",
+        "TCAS_concept_carton_lane_drive_fin3",
+        "TCAS_concept_carton_lane_drive_fin4",
+        "TCAS_concept_carton_lane_drive_fin5",
+        "TCAS_concept_carton_lane_side_-1",
+        "TCAS_concept_carton_lane_leg_-10",
+        "TCAS_concept_carton_lane_foot_-10",
+        "TCAS_concept_carton_lane_level_-10",
+        "TCAS_concept_carton_lane_gusset_-10",
+        "TCAS_concept_carton_lane_leg_-11",
+        "TCAS_concept_carton_lane_foot_-11",
+        "TCAS_concept_carton_lane_level_-11",
+        "TCAS_concept_carton_lane_gusset_-11",
+        "TCAS_concept_carton_lane_side_1",
+        "TCAS_concept_carton_lane_leg_10",
+        "TCAS_concept_carton_lane_foot_10",
+        "TCAS_concept_carton_lane_level_10",
+        "TCAS_concept_carton_lane_gusset_10",
+        "TCAS_concept_carton_lane_leg_11",
+        "TCAS_concept_carton_lane_foot_11",
+        "TCAS_concept_carton_lane_level_11",
+        "TCAS_concept_carton_lane_gusset_11",
+        "TCAS_concept_carton_lane_cross_0",
+        "TCAS_concept_carton_lane_cross_1",
+        "TCAS_concept_metering_eye_bracket",
+        "TCAS_concept_metering_eye_sensor",
+        "TCAS_concept_metering_eye_lens",
+        "TCAS_concept_metering_eye_cable",
+        "TCAS_concept_label_verify_eye_bracket",
+        "TCAS_concept_label_verify_eye_sensor",
+        "TCAS_concept_label_verify_eye_lens",
+        "TCAS_concept_label_verify_eye_cable",
+        "TCAS_concept_pickup_eye_bracket",
+        "TCAS_concept_pickup_eye_sensor",
+        "TCAS_concept_pickup_eye_lens",
+        "TCAS_concept_pickup_eye_cable",
+        "TCAS_concept_label_support_-0.96",
+        "TCAS_concept_label_foot_-0.96",
+        "TCAS_concept_label_support_-0.38",
+        "TCAS_concept_label_foot_-0.38",
+        "TCAS_concept_label_sideplate",
+        "TCAS_concept_label_sideplate_crossmount",
+        "TCAS_concept_label_unwind_shaft",
+        "TCAS_concept_label_rewind_shaft",
+        "TCAS_concept_web_guide_shaft_0",
+        "TCAS_concept_web_guide_shaft_1",
+        "TCAS_concept_label_web_payoff",
+        "TCAS_concept_label_web_guide_arc0",
+        "TCAS_concept_label_web_horizontal",
+        "TCAS_concept_label_web_guide_arc1",
+        "TCAS_concept_label_web_to_peel",
+        "TCAS_concept_label_web_peel_bend",
+        "TCAS_concept_label_web_liner_return",
+        "TCAS_concept_label_peel_knife",
+        "TCAS_concept_peel_plate",
+        "TCAS_concept_label_cylinder_mount",
+        "TCAS_concept_label_air_cylinder",
+        "TCAS_concept_label_web_motor",
+        "TCAS_concept_label_motor_fin_0",
+        "TCAS_concept_label_motor_fin_1",
+        "TCAS_concept_label_motor_fin_2",
+        "TCAS_concept_label_motor_fin_3",
+        "TCAS_concept_label_motor_fin_4",
+        "TCAS_concept_label_air_lines",
+        "TCAS_concept_stop_gate_cylinder",
+        "TCAS_concept_gantry_post_(4.85, -0.5)",
+        "TCAS_concept_gantry_base_(4.85, -0.5)",
+        "TCAS_concept_base_bolt_(4.85, -0.5, -0.07)",
+        "TCAS_concept_base_bolt_(4.85, -0.5, 0.07)",
+        "TCAS_concept_gantry_post_(4.85, 1.7)",
+        "TCAS_concept_gantry_base_(4.85, 1.7)",
+        "TCAS_concept_base_bolt_(4.85, 1.7, -0.07)",
+        "TCAS_concept_base_bolt_(4.85, 1.7, 0.07)",
+        "TCAS_concept_gantry_post_(7.05, -0.5)",
+        "TCAS_concept_gantry_base_(7.05, -0.5)",
+        "TCAS_concept_base_bolt_(7.05, -0.5, -0.07)",
+        "TCAS_concept_base_bolt_(7.05, -0.5, 0.07)",
+        "TCAS_concept_gantry_post_(7.05, 1.7)",
+        "TCAS_concept_gantry_base_(7.05, 1.7)",
+        "TCAS_concept_base_bolt_(7.05, 1.7, -0.07)",
+        "TCAS_concept_base_bolt_(7.05, 1.7, 0.07)",
+        "TCAS_concept_gantry_fixed_X_beam-0.5",
+        "TCAS_concept_gantry_fixed_X_rail-0.5",
+        "TCAS_concept_gantry_X_drive_screw-0.5",
+        "TCAS_concept_gantry_fixed_X_beam1.7",
+        "TCAS_concept_gantry_fixed_X_rail1.7",
+        "TCAS_concept_gantry_X_drive_screw1.7",
+        "TCAS_concept_gantry_X_servo_can",
+        "TCAS_concept_gantry_X_servo_gearbox",
+        "TCAS_concept_gantry_X_servo_terminal",
+        "TCAS_concept_gantry_X_servo_fin0",
+        "TCAS_concept_gantry_X_servo_fin1",
+        "TCAS_concept_gantry_X_servo_fin2",
+        "TCAS_concept_gantry_X_servo_fin3",
+        "TCAS_concept_gantry_X_servo_fin4",
+        "TCAS_concept_gantry_X_servo_fin5",
+        "TCAS_concept_gantry_cable_chain_link0",
+        "TCAS_concept_gantry_cable_chain_link1",
+        "TCAS_concept_gantry_cable_chain_link2",
+        "TCAS_concept_gantry_cable_chain_link3",
+        "TCAS_concept_gantry_cable_chain_link4",
+        "TCAS_concept_gantry_cable_chain_link5",
+        "TCAS_concept_gantry_cable_chain_link6",
+        "TCAS_concept_gantry_cable_chain_link7",
+        "TCAS_concept_gantry_cable_chain_link8",
+        "TCAS_concept_gantry_cable_chain_link9",
+        "TCAS_concept_gantry_cable_chain_link10",
+        "TCAS_concept_gantry_cable_chain_link11",
+        "TCAS_concept_gantry_cable_chain_link12",
+        "TCAS_concept_gantry_cable_chain_link13",
+        "TCAS_concept_gantry_cable_chain_link14",
+        "TCAS_concept_gantry_cable_chain_link15",
+        "TCAS_concept_gantry_cable_chain_link16",
+        "TCAS_concept_gantry_cable_chain_link17",
+        "TCAS_concept_gantry_cable_chain_link18",
+        "TCAS_concept_gantry_cable_chain_link19",
+        "TCAS_concept_gantry_cable_chain_link20",
+        "TCAS_concept_gantry_cable_chain_link21",
+        "TCAS_concept_gantry_cable_chain_link22",
+        "TCAS_concept_gantry_cable_chain_link23",
+        "TCAS_concept_guard_post(0, 4.78)",
+        "TCAS_concept_guard_post(0, 5.6)",
+        "TCAS_concept_guard_panel0",
+        "TCAS_concept_guard_rail(0, 0.41)",
+        "TCAS_concept_guard_rail(0, 1.85)",
+        "TCAS_concept_guard_post(1, 5.65)",
+        "TCAS_concept_guard_post(1, 7.1)",
+        "TCAS_concept_guard_panel1",
+        "TCAS_concept_guard_rail(1, 0.41)",
+        "TCAS_concept_guard_rail(1, 1.85)",
+        "TCAS_concept_guard_post(2, 4.78)",
+        "TCAS_concept_guard_post(2, 7.1)",
+        "TCAS_concept_guard_panel2",
+        "TCAS_concept_guard_rail(2, 0.41)",
+        "TCAS_concept_guard_rail(2, 1.85)",
+        "TCAS_concept_service_door_handle",
+        "TCAS_concept_service_door_hinge0.62",
+        "TCAS_concept_service_door_hinge1.58",
+        "TCAS_concept_service_cabinet_body",
+        "TCAS_concept_service_cabinet_plinth",
+        "TCAS_concept_service_cabinet_door",
+        "TCAS_concept_service_cabinet_handle",
+        "TCAS_concept_cabinet_conduit",
+        "TCAS_concept_sealer_post(7.56, 0.87)",
+        "TCAS_concept_sealer_foot(7.56, 0.87)",
+        "TCAS_concept_sealer_post(7.56, 1.63)",
+        "TCAS_concept_sealer_foot(7.56, 1.63)",
+        "TCAS_concept_sealer_post(8.04, 0.87)",
+        "TCAS_concept_sealer_foot(8.04, 0.87)",
+        "TCAS_concept_sealer_post(8.04, 1.63)",
+        "TCAS_concept_sealer_foot(8.04, 1.63)",
+        "TCAS_concept_sealer_top_bridge",
+        "TCAS_concept_sealer_head_mount",
+        "TCAS_concept_sealer_tape_roll_bracket",
+        "TCAS_concept_sealer_tape_web",
+        "TCAS_concept_sealer_tape_applicator",
+        "TCAS_concept_sealer_flap_plow_-1",
+        "TCAS_concept_sealer_flap_plow_1",
+        "TCAS_concept_sealer_entry_plow_crossbar",
+        "TCAS_concept_sealer_adjustment_guide1.09",
+        "TCAS_concept_sealer_adjustment_guide1.39",
+        "TCAS_concept_sealer_drive_can",
+        "TCAS_concept_sealer_drive_gearbox",
+        "TCAS_concept_sealer_drive_terminal",
+        "TCAS_concept_sealer_drive_fin0",
+        "TCAS_concept_sealer_drive_fin1",
+        "TCAS_concept_sealer_drive_fin2",
+        "TCAS_concept_sealer_drive_fin3",
+        "TCAS_concept_sealer_drive_fin4",
+        "TCAS_concept_sealer_drive_fin5",
+        "TCAS_concept_floor_lane_mark0",
+        "TCAS_concept_floor_lane_mark1",
+        "TCAS_concept_floor_lane_mark2",
+        "TCAS_concept_prefilled_pouch_boundary_threshold",
+        "TCAS_concept_empty_case_boundary_threshold",
+        "TCAS_concept_shipping_handoff_boundary_threshold",
+        "TCAS_concept_cable_tray_rung5.0",
+        "TCAS_concept_cable_tray_rung6.0",
+        "TCAS_concept_cable_tray_rung7.0",
+        "TCAS_concept_cable_tray_rung8.0",
+        "TCAS_concept_cable_tray_side1.94",
+        "TCAS_concept_cable_tray_side2.13"
+      ],
+      "boundsFreeCAD": [
+        [
+          -3.1350000000000007,
+          -1.08,
+          0.003
+        ],
+        [
+          9.6,
+          2.555,
+          2.5049999999999994
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          -3.1350000000000007,
+          0.003,
+          -2.555
+        ],
+        [
+          9.6,
+          2.5049999999999994,
+          1.08
+        ]
+      ]
+    },
+    "infeed_roller_0": {
+      "names": [
+        "TCAS_concept_infeed_roller_0"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        -2.935,
+        0.875,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          -2.995,
+          -0.25,
+          0.815
+        ],
+        [
+          -2.875,
+          0.25,
+          0.935
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          -2.995,
+          0.815,
+          -0.25
+        ],
+        [
+          -2.875,
+          0.935,
+          0.25
+        ]
+      ]
+    },
+    "infeed_roller_1": {
+      "names": [
+        "TCAS_concept_infeed_roller_1"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        -0.075,
+        0.875,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          -0.135,
+          -0.25,
+          0.815
+        ],
+        [
+          -0.015,
+          0.25,
+          0.935
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          -0.135,
+          0.815,
+          -0.25
+        ],
+        [
+          -0.015,
+          0.935,
+          0.25
+        ]
+      ]
+    },
+    "accepted_roller_0": {
+      "names": [
+        "TCAS_concept_accepted_roller_0"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        4.675000000000001,
+        0.875,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          4.615000000000001,
+          -0.25,
+          0.815
+        ],
+        [
+          4.735000000000001,
+          0.25,
+          0.935
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          4.615000000000001,
+          0.815,
+          -0.25
+        ],
+        [
+          4.735000000000001,
+          0.935,
+          0.25
+        ]
+      ]
+    },
+    "accepted_roller_1": {
+      "names": [
+        "TCAS_concept_accepted_roller_1"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        5.585,
+        0.875,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          5.525,
+          -0.25,
+          0.815
+        ],
+        [
+          5.645,
+          0.25,
+          0.935
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.525,
+          0.815,
+          -0.25
+        ],
+        [
+          5.645,
+          0.935,
+          0.25
+        ]
+      ]
+    },
+    "carton_lane_roller_0": {
+      "names": [
+        "TCAS_concept_carton_lane_roller_0"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        5.715000000000001,
+        0.875,
+        -1.25
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          5.655000000000001,
+          0.98,
+          0.815
+        ],
+        [
+          5.775000000000001,
+          1.52,
+          0.935
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.655000000000001,
+          0.815,
+          -1.52
+        ],
+        [
+          5.775000000000001,
+          0.935,
+          -0.98
+        ]
+      ]
+    },
+    "carton_lane_roller_1": {
+      "names": [
+        "TCAS_concept_carton_lane_roller_1"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        9.285,
+        0.875,
+        -1.25
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          9.225,
+          0.98,
+          0.815
+        ],
+        [
+          9.345,
+          1.52,
+          0.935
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          9.225,
+          0.815,
+          -1.52
+        ],
+        [
+          9.345,
+          0.935,
+          -0.98
+        ]
+      ]
+    },
+    "unwind_roller": {
+      "names": [
+        "TCAS_concept_label_unwind_web",
+        "TCAS_concept_label_unwind_flange-0.72",
+        "TCAS_concept_label_unwind_flange-0.58"
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        -0.65,
+        1.38,
+        0.67
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          -0.72,
+          -0.81,
+          1.24
+        ],
+        [
+          -0.575,
+          -0.53,
+          1.52
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          -0.72,
+          1.24,
+          0.53
+        ],
+        [
+          -0.575,
+          1.52,
+          0.81
+        ]
+      ]
+    },
+    "rewind_roller": {
+      "names": [
+        "TCAS_concept_label_rewind_web",
+        "TCAS_concept_label_rewind_flange-0.72",
+        "TCAS_concept_label_rewind_flange-0.58"
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        -0.65,
+        1.08,
+        0.96
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          -0.72,
+          -1.035,
+          1.005
+        ],
+        [
+          -0.575,
+          -0.885,
+          1.155
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          -0.72,
+          1.005,
+          0.885
+        ],
+        [
+          -0.575,
+          1.155,
+          1.035
+        ]
+      ]
+    },
+    "web_rollers": {
+      "names": [
+        "TCAS_concept_web_guide_0",
+        "TCAS_concept_web_guide_1"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        -0.65,
+        1.185,
+        0.5
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "individualMeshRotation",
+      "units": "rad",
+      "pivotPolicy": "each mesh measured center",
+      "rotationSigns": {
+        "TCAS_concept_web_guide_0": 1,
+        "TCAS_concept_web_guide_1": -1
+      },
+      "boundsFreeCAD": [
+        [
+          -0.71,
+          -0.515,
+          1.14
+        ],
+        [
+          -0.59,
+          -0.3,
+          1.2
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          -0.71,
+          1.14,
+          0.3
+        ],
+        [
+          -0.59,
+          1.2,
+          0.515
+        ]
+      ],
+      "meshPivotsBrowser": {
+        "TCAS_concept_web_guide_0": [
+          -0.6499999999999999,
+          1.185,
+          0.5
+        ],
+        "TCAS_concept_web_guide_1": [
+          -0.6499999999999999,
+          1.1549999999999998,
+          0.315
+        ]
+      }
+    },
+    "label_tamp_rod": {
+      "names": [
+        "TCAS_concept_label_tamp_rod"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        -0.65,
+        1.06,
+        0.42
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0.107,
+        0.352
+      ],
+      "motion": "anchoredAxialExtension",
+      "units": "m",
+      "anchorFreeCAD": [
+        -0.65,
+        -0.42,
+        1.06
+      ],
+      "homeLength": 0.107,
+      "radius": 0.009,
+      "boundsFreeCAD": [
+        [
+          -0.659,
+          -0.42,
+          1.051
+        ],
+        [
+          -0.641,
+          -0.313,
+          1.069
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          -0.659,
+          1.051,
+          0.313
+        ],
+        [
+          -0.641,
+          1.069,
+          0.42
+        ]
+      ]
+    },
+    "label_tamp": {
+      "names": [
+        "TCAS_concept_label_tamp_carriage",
+        "TCAS_concept_label_tamp_pad"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        -0.65,
+        1.06,
+        0.3
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0,
+        0.245
+      ],
+      "motion": "translation",
+      "units": "m",
+      "parent": "static",
+      "contactPlaneFreeCADY": -0.055,
+      "boundsFreeCAD": [
+        [
+          -0.707,
+          -0.313,
+          1.012
+        ],
+        [
+          -0.593,
+          -0.3,
+          1.108
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          -0.707,
+          1.012,
+          0.3
+        ],
+        [
+          -0.593,
+          1.108,
+          0.313
+        ]
+      ]
+    },
+    "stop_gate": {
+      "names": [
+        "TCAS_concept_stop_gate_blade",
+        "TCAS_concept_stop_gate_slide",
+        "TCAS_concept_stop_gate_rod"
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        5.36,
+        0.94,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -0.14,
+        0
+      ],
+      "motion": "translation",
+      "units": "m",
+      "boundsFreeCAD": [
+        [
+          5.36,
+          -0.24,
+          0.78
+        ],
+        [
+          5.385,
+          0.24,
+          1.05
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.36,
+          0.78,
+          -0.24
+        ],
+        [
+          5.385,
+          1.05,
+          0.24
+        ]
+      ]
+    },
+    "gantry_x": {
+      "names": [
+        "TCAS_concept_gantry_X_runner-0.5",
+        "TCAS_concept_gantry_X_runner1.7",
+        "TCAS_concept_gantry_moving_bridge",
+        "TCAS_concept_gantry_Y_rail5.21",
+        "TCAS_concept_gantry_Y_rail5.29"
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        5.25,
+        1.06,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0,
+        1.11
+      ],
+      "motion": "translation",
+      "units": "m",
+      "parent": "static",
+      "boundsFreeCAD": [
+        [
+          5.19,
+          -0.58,
+          2.375
+        ],
+        [
+          5.31,
+          1.78,
+          2.533
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.19,
+          2.375,
+          -1.78
+        ],
+        [
+          5.31,
+          2.533,
+          0.58
+        ]
+      ]
+    },
+    "gantry_y": {
+      "names": [
+        "TCAS_concept_gantry_Y_trolley",
+        "TCAS_concept_gantry_Y_servo_can",
+        "TCAS_concept_gantry_Y_servo_gearbox",
+        "TCAS_concept_gantry_Y_servo_terminal",
+        "TCAS_concept_gantry_Y_servo_fin0",
+        "TCAS_concept_gantry_Y_servo_fin1",
+        "TCAS_concept_gantry_Y_servo_fin2",
+        "TCAS_concept_gantry_Y_servo_fin3",
+        "TCAS_concept_gantry_Y_servo_fin4",
+        "TCAS_concept_gantry_Y_servo_fin5",
+        "TCAS_concept_gantry_Z_fixed_rail5.185",
+        "TCAS_concept_gantry_Z_fixed_rail5.315",
+        "TCAS_concept_gantry_Z_backbone",
+        "TCAS_concept_gantry_Z_screw",
+        "TCAS_concept_gantry_tool_air"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        5.25,
+        1.06,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0,
+        1.32
+      ],
+      "motion": "translation",
+      "units": "m",
+      "parent": "gantry_x",
+      "boundsFreeCAD": [
+        [
+          5.155,
+          -0.175,
+          1.6
+        ],
+        [
+          5.356,
+          0.096,
+          2.725
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.155,
+          1.6,
+          -0.096
+        ],
+        [
+          5.356,
+          2.725,
+          0.175
+        ]
+      ]
+    },
+    "gantry_z": {
+      "names": [
+        "TCAS_concept_gantry_Z_telescopic_tool_rod5.185",
+        "TCAS_concept_gantry_Z_telescopic_tool_rod5.315",
+        "TCAS_concept_gantry_Z_moving_slide",
+        "TCAS_concept_gripper_crossbar",
+        "TCAS_concept_gripper_actuator"
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        5.25,
+        1.06,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0,
+        0.75
+      ],
+      "motion": "translation",
+      "units": "m",
+      "parent": "gantry_y",
+      "boundsFreeCAD": [
+        [
+          5.13,
+          -0.065,
+          1.27
+        ],
+        [
+          5.37,
+          0.065,
+          2.48
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.13,
+          1.27,
+          -0.065
+        ],
+        [
+          5.37,
+          2.48,
+          0.065
+        ]
+      ]
+    },
+    "jaw_left": {
+      "names": [
+        "TCAS_concept_gripper_jaw_left_finger",
+        "TCAS_concept_gripper_jaw_left_pad",
+        "TCAS_concept_gripper_jaw_left_slider"
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        5.25,
+        1.06,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0,
+        0.018
+      ],
+      "motion": "translation",
+      "units": "m",
+      "parent": "gantry_z",
+      "boundsFreeCAD": [
+        [
+          5.12,
+          -0.055,
+          1.015
+        ],
+        [
+          5.146,
+          0.055,
+          1.294
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.12,
+          1.015,
+          -0.055
+        ],
+        [
+          5.146,
+          1.294,
+          0.055
+        ]
+      ]
+    },
+    "jaw_right": {
+      "names": [
+        "TCAS_concept_gripper_jaw_right_finger",
+        "TCAS_concept_gripper_jaw_right_pad",
+        "TCAS_concept_gripper_jaw_right_slider"
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        5.25,
+        1.06,
+        0
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -0.018,
+        0
+      ],
+      "motion": "translation",
+      "units": "m",
+      "parent": "gantry_z",
+      "boundsFreeCAD": [
+        [
+          5.354,
+          -0.055,
+          1.015
+        ],
+        [
+          5.38,
+          0.055,
+          1.294
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.354,
+          1.015,
+          -0.055
+        ],
+        [
+          5.38,
+          1.294,
+          0.055
+        ]
+      ]
+    },
+    "sealer_roll": {
+      "names": [
+        "TCAS_concept_sealer_tape_roll",
+        "TCAS_concept_sealer_tape_core"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        7.8,
+        1.79,
+        -1.25
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          7.67,
+          1.2,
+          1.66
+        ],
+        [
+          7.93,
+          1.3,
+          1.92
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          7.67,
+          1.66,
+          -1.3
+        ],
+        [
+          7.93,
+          1.92,
+          -1.2
+        ]
+      ]
+    },
+    "sealer_rollers": {
+      "names": [
+        "TCAS_concept_sealer_top_roller7.64",
+        "TCAS_concept_sealer_top_roller7.96"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        7.8,
+        1.27,
+        -1.25
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "motion": "individualMeshRotation",
+      "units": "rad",
+      "boundsFreeCAD": [
+        [
+          7.595,
+          1.12,
+          1.235
+        ],
+        [
+          8.005,
+          1.38,
+          1.325
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          7.595,
+          1.235,
+          -1.38
+        ],
+        [
+          8.005,
+          1.325,
+          -1.12
+        ]
+      ],
+      "meshPivotsBrowser": {
+        "TCAS_concept_sealer_top_roller7.64": [
+          7.64,
+          1.28,
+          -1.25
+        ],
+        "TCAS_concept_sealer_top_roller7.96": [
+          7.960000000000001,
+          1.28,
+          -1.25
+        ]
+      }
+    },
+    "carton_body": {
+      "names": [
+        "TCAS_concept_case_base",
+        "TCAS_concept_case_longwall-1",
+        "TCAS_concept_case_endwall-1",
+        "TCAS_concept_case_longwall1",
+        "TCAS_concept_case_endwall1"
+      ],
+      "boundsFreeCAD": [
+        [
+          5.99,
+          1.07,
+          0.94
+        ],
+        [
+          6.51,
+          1.43,
+          1.22
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.99,
+          0.94,
+          -1.43
+        ],
+        [
+          6.51,
+          1.22,
+          -1.07
+        ]
+      ]
+    },
+    "flap_y_plus": {
+      "names": [
+        "TCAS_concept_flap_y_plus"
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        6.25,
+        1.223,
+        -1.428
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0,
+        1.5707963267948966
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "parent": "carton_body",
+      "closeOrder": 1,
+      "boundsFreeCAD": [
+        [
+          5.994,
+          1.426,
+          1.223
+        ],
+        [
+          6.506,
+          1.43,
+          1.403
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.994,
+          1.223,
+          -1.43
+        ],
+        [
+          6.506,
+          1.403,
+          -1.426
+        ]
+      ]
+    },
+    "flap_y_minus": {
+      "names": [
+        "TCAS_concept_flap_y_minus"
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        6.25,
+        1.229,
+        -1.072
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0,
+        -1.5707963267948966
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "parent": "carton_body",
+      "closeOrder": 1,
+      "boundsFreeCAD": [
+        [
+          5.994,
+          1.07,
+          1.229
+        ],
+        [
+          6.506,
+          1.074,
+          1.409
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.994,
+          1.229,
+          -1.074
+        ],
+        [
+          6.506,
+          1.409,
+          -1.07
+        ]
+      ]
+    },
+    "flap_x_plus": {
+      "names": [
+        "TCAS_concept_flap_x_plus"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        6.508,
+        1.216,
+        -1.25
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0,
+        -1.5707963267948966
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "parent": "carton_body",
+      "closeOrder": 0,
+      "boundsFreeCAD": [
+        [
+          6.506,
+          1.074,
+          1.216
+        ],
+        [
+          6.51,
+          1.426,
+          1.476
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          6.506,
+          1.216,
+          -1.426
+        ],
+        [
+          6.51,
+          1.476,
+          -1.074
+        ]
+      ]
+    },
+    "flap_x_minus": {
+      "names": [
+        "TCAS_concept_flap_x_minus"
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "axisCoordinateSystem": "FreeCAD Z-up",
+      "pivot": [
+        5.992,
+        1.21,
+        -1.25
+      ],
+      "pivotCoordinateSystem": "browser Y-up",
+      "range": [
+        0,
+        1.5707963267948966
+      ],
+      "motion": "rotation",
+      "units": "rad",
+      "parent": "carton_body",
+      "closeOrder": 0,
+      "boundsFreeCAD": [
+        [
+          5.99,
+          1.074,
+          1.21
+        ],
+        [
+          5.994,
+          1.426,
+          1.47
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.99,
+          1.21,
+          -1.426
+        ],
+        [
+          5.994,
+          1.47,
+          -1.074
+        ]
+      ]
+    },
+    "carton_tape": {
+      "names": [
+        "TCAS_concept_case_top_tape"
+      ],
+      "initialVisible": false,
+      "boundsFreeCAD": [
+        [
+          5.99,
+          1.225,
+          1.232
+        ],
+        [
+          6.51,
+          1.275,
+          1.2335
+        ]
+      ],
+      "boundsBrowser": [
+        [
+          5.99,
+          1.232,
+          -1.275
+        ],
+        [
+          6.51,
+          1.2335,
+          -1.225
+        ]
+      ]
+    }
+  },
+  "carton": {
+    "homeFreeCAD": [
+      6.25,
+      1.25,
+      0.94
+    ],
+    "homeBrowser": [
+      6.25,
+      0.94,
+      -1.25
+    ],
+    "outerDimensions": [
+      0.52,
+      0.36,
+      0.28
+    ],
+    "wall": 0.004,
+    "base": 0.006,
+    "pouchSlotsFreeCAD": [
+      [
+        6.14,
+        1.18,
+        0.946
+      ],
+      [
+        6.14,
+        1.32,
+        0.946
+      ],
+      [
+        6.36,
+        1.18,
+        0.946
+      ],
+      [
+        6.36,
+        1.32,
+        0.946
+      ]
+    ],
+    "flapOrder": [
+      "flap_x_plus",
+      "flap_x_minus",
+      "flap_y_plus",
+      "flap_y_minus"
+    ],
+    "asset": "assets/carton-template.glb"
+  },
+  "bounds": {
+    "factory-context": {
+      "parts": 327,
+      "sha256": "b0e023427526f9e8defffe32d1c3eeb157b9aa980010d74bb75badccf520a54f",
+      "bytes": 2540404,
+      "nodes": 327,
+      "triangles": 82788,
+      "boundsBrowser": [
+        [
+          -3.134999990463257,
+          0.003000000026077032,
+          -2.555000066757202
+        ],
+        [
+          9.600000381469727,
+          2.7249999046325684,
+          1.0800000429153442
+        ]
+      ]
+    },
+    "carton-template": {
+      "parts": 10,
+      "sha256": "248890a0bb47e4595b839f4c1396e79d6cbd7cfa8838e99516ebd01fccd2d845",
+      "bytes": 13920,
+      "nodes": 10,
+      "triangles": 120,
+      "boundsBrowser": [
+        [
+          5.989999771118164,
+          0.9399999976158142,
+          -1.4299999475479126
+        ],
+        [
+          6.510000228881836,
+          1.4759999513626099,
+          -1.0700000524520874
+        ]
+      ]
+    }
+  },
+  "provenance": {
+    "classification": "INFERRED original generic capability concept; not customer factory, OEM SKU, rated equipment or certified guard",
+    "sourceHashes": {
+      "TCAS_concept_factory.FCStd": "8675dc9af2fb06b10a850fd2ae03242116ebdee3f3da422a6bf862f909de7b91",
+      "build_factory.py": "827f70b11e4344d9ec79a6193e84a9e4170a90ffce5b4fc8c1cf6fefaa933355",
+      "factory_meshes.json": "0169fcc5252c12f0f66c56b9382143df4c9949fa8a05f333e25c2b1ef2de4584"
+    },
+    "excluded": "Existing simulation-v2 entirely untouched; existing 471 main parts absent from context",
+    "limitations": [
+      "No structural, safety, electrical or production engineering qualification",
+      "Procedural triangulation, no actual CV inference",
+      "Cable chains and hoses illustrative; no dynamic hose physics"
+    ],
+    "exportScript_sha256": "a117bae84870e55ac74b9f9285573190aead74aad8809ec8b6f06582416b14c7"
+  }
+}

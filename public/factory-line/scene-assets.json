@@ -1,0 +1,23 @@
+{
+  "context": {
+    "bytes": 2540404,
+    "sha256": "b0e023427526f9e8defffe32d1c3eeb157b9aa980010d74bb75badccf520a54f",
+    "chunks": [
+      {
+        "filename": "factory-context-b0e023427526-000.bin",
+        "bytes": 2097152,
+        "sha256": "3f330397bf15c787cdf83ca1cb8dc62a486e6d314a1356acbf865b19811d91ed"
+      },
+      {
+        "filename": "factory-context-b0e023427526-001.bin",
+        "bytes": 443252,
+        "sha256": "f924b293de94f7bb28c4aba836c84563ad1a64470fba24149c8302d920edb16c"
+      }
+    ]
+  },
+  "carton": {
+    "bytes": 13920,
+    "sha256": "248890a0bb47e4595b839f4c1396e79d6cbd7cfa8838e99516ebd01fccd2d845",
+    "file": "assets/carton-template.glb"
+  }
+}
